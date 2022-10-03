@@ -22,17 +22,17 @@
     <!-- HEADER -->
     <header id="home">
         <!-- navbar -->
-        <nav class="mode">
+        <nav class="mode-bg">
             <div class="logo">
-                <a href="https://rosyanxone.github.io" class="mode">
+                <a href="https://rosyanxone.github.io/posttest3" class="mode-text">
                     PIXEL
                 </a>
             </div>
 
-            <ul class="pt-3">
-                <li><a class="mode" href="#home">Home</a></li>
-                <li><a class="mode" href="#about">About Us</a></li>
-                <li><a class="mode" href="#contact">Contact Us</a></li>
+            <ul>
+                <li><a class="mode-text" href="#home">Home</a></li>
+                <li><a class="mode-text" href="#about">About Us</a></li>
+                <li><a class="mode-text" href="#contact">Contact Us</a></li>
             </ul>
             <div>
                 <input type="checkbox" class="checkbox" id="chk"/>
@@ -56,10 +56,10 @@
             <div class="header-item-left">
                 <h1>LET THE<br>GAME BEGIN</h1>
                 <p>Renting is an agreement where a payment is made for the temporary use of a good, service, or property. Economic rent is any payment in excess of the cost of production. Rent-seeking attempts to increase one's share of existing wealth without creating wealth. Nemo, assumenda? Libero eligendi, recusandae ab rerum eius excepturi inventore, in esse eos laboriosam distinctio.</p>
-                <a href="#coming-soon">
+                <a href="#coming-soon" onclick="alert('Coming Soon!')">
                     <button class="rent-btn">Rent Now</button>
                 </a>
-                <a href="#coming-soon">
+                <a href="#coming-soon" onclick="alert('Coming Soon!')">
                     <button class="play-btn">Play</button>
                 </a>
                 <h4>Available Service :</h4>
@@ -75,7 +75,7 @@
 
     <!-- MAIN CONTENT -->
     <section>
-        <div class="about-container mode" id="about">
+        <div class="about-container mode-bg mode-text" id="about">
             <div class="about-title">
                 <h2>ABOUT US</h2>
             </div>
@@ -90,12 +90,12 @@
             $sql = "SELECT * FROM rental_ps";
             $result = $conn->query($sql);
         @endphp
-        <div class="price-container mode">
-            <h3 class="mode">Price List</h3>
+        <div class="price-container mode-bg">
+            <h3 class="mode-text">Price List</h3>
             <div class="price-table">
                 <table class="table">
-                    <thead class="mode-bor">
-                        <tr>
+                    <thead class="mode-border">
+                        <tr class="mode-text">
                             <th scope='col'>No</th>
                             <th scope='col'>Brand</th>
                             <th scope='col'>Type</th>
@@ -107,7 +107,7 @@
                         @php
                             while($row = $result-> fetch_assoc()) {
                                 echo "
-                                    <tr>
+                                    <tr class='mode-text'>
                                         <td scope='row'>". $row["id"]."</td>
                                         <td>". $row["merek"]."</td>
                                         <td>". $row["jenis"]."</td>
@@ -134,12 +134,12 @@
         <div class="service-container">
             <h3>Our Services</h3>
             <div class="service-cards">
-                <div class="card-panel mode">
+                <div class="card-panel mode-bg mode-text">
                     <img src="img/service/ps-logo.png" class="mode-img" alt="">
                     <h4>Playstation</h4>
                     <p>PlayStation is a brand produced by Sony Interactive Entertainment. The first PlayStation console was released in Japan in December 1994, and released worldwide the following year.</p>
                 </div>
-                <div class="card-panel mode">
+                <div class="card-panel mode-bg mode-text">
                     <img src="img/service/xbox-logo.png" class="mode-img" alt="">
                     <h4>Xbox</h4>
                     <p>Xbox is a video gaming brand created and owned by Microsoft. The brand was first introduced in the United States in November 2001, with the launch of the original Xbox console.</p>
@@ -151,8 +151,8 @@
 
 
     <!-- FOOTER -->
-    <footer class="mode">
-        <div class="footer-container mode">
+    <footer class="mode-bg">
+        <div class="footer-container">
             <div class="footer-title" id="contact">
                 <h2>CONTACT US</h2>
             </div>
@@ -187,10 +187,11 @@
     </footer>
     <!-- END FOOTER -->
 
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="js/dark-mode.js"></script>
-    <script src="js/manipulasi-dom.js"></script>
+    <script src="js/navbar-mobile.js"></script>
     <script src="js/pop-up-box.js"></script>
     <script src="https://kit.fontawesome.com/a374d5ed26.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script> -->
 </body>
 </html>

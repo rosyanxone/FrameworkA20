@@ -15,6 +15,7 @@ body {
     color: black;
   }
 
+/* dark mode switch */
 .checkbox {
 	opacity: 0;
 	position: absolute;
@@ -57,9 +58,13 @@ body {
 	color: #f39c12;
 }
 
-.dark {
+/* kebutuhan dark mode */
+.dark-bg {
     transition: 0.5s;
     background-color: black !important;
+}
+
+.light-text {
     color: white !important;
 }
 
