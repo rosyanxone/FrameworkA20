@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rental_ps', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('merek', 12);
-            $table->string('jenis', 30);
-            $table->string('harga', 10);
-            $table->string('per_week', 10);
+            $table->string('judul', 80);
+            $table->string('konten', 128);
+            $table->string('kategori', 10);
+            $table->string('gambar', 18);
+            $table->date('waktu', 18);
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rental_ps');
+        Schema::dropIfExists('articles');
     }
 };
